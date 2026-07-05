@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alakazam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="chat-card">
+
+        <header class="chat-header">
+            <div class="brand">
+                <div class="brand-orb"></div>
+                <div class="brand-text">
+                    <h1>Alakazam</h1>
+                    <span class="status"><i class="dot"></i>Online</span>
+                </div>
+            </div>
+        </header>
+
+        <div id="chat-box" class="chat-box">
+            <div class="msg ai">
+                <div class="avatar ai-avatar">A</div>
+                <div class="bubble">Hi! I'm Alakazam. Ask me anything to get started.</div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="message"
+                placeholder="Message Alakazam..."
+                autocomplete="off">
+            <button id="send-btn" onclick="sendMessage()" aria-label="Send message">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 12L20 4L13 20L11 13L4 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
